@@ -1,3 +1,8 @@
 const { helloworld } = require ('./helloworld');
 
-console.log( helloworld() );
+function main() {
+    const greeting = helloworld();
+    console.log( greeting );
+}
+
+main();
