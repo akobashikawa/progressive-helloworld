@@ -4,6 +4,7 @@
   "description": "Progressive Programming Hello World",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "spec": "jest"
   },
   "keywords": [],
