@@ -1,9 +1,9 @@
-const { helloworld } = require ('./helloworld');
+const HelloWorld = require ('./helloworld');
 
 describe('El saludo es mostrado', () => {
 
     test('El saludo es mostrado', () => {
-        const result = helloworld();
+        const result = HelloWorld.helloworld();
         expect(result).toBe('Hello World');
     });
 

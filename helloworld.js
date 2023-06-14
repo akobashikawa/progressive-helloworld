@@ -1,7 +1,7 @@
-function helloworld() {
-    return "Hello World";
+class HelloWorld {
+    static helloworld() {
+        return "Hello World";
+    }
 }
 
-module.exports = {
-    helloworld,
-};
+module.exports = HelloWorld;
