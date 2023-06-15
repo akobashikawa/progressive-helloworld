@@ -6,7 +6,7 @@ class ApiController {
 
     }
     
-    helloworld = async (req, res, next) => {
+    helloworld = (req, res, next) => {
         const greeting = HelloWorld.helloworld();
         res.json({ greeting });
     }
