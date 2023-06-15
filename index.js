@@ -1,4 +1,4 @@
-const { helloworld } = require ('./helloworld');
+const { helloworld } = require ('./core/helloworld');
 
 function main() {
     const greeting = helloworld();

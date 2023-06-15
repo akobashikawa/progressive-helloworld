@@ -1,18 +1,19 @@
 const express = require('express');
-const HelloWorld = require('./helloworld');
+const path = require('path');
+
+const apiRouter = require('./api/apiRouter');
 
 const app = express();
 
 const port = 3000;
 
-app.get('/', (req, res, next) => {
-    res.send('<h1>Express server</h1>');
-});
+app.use('/', express.static(path.join(__dirname, 'public')));
 
-app.get('/helloworld', (req, res, next) => {
-    const greeting = HelloWorld.helloworld();
-    res.send(greeting);
-});
+// app.get('/', (req, res, next) => {
+//     res.send('<h1>Express server</h1>');
+// });
+
+app.use('/api', apiRouter);
 
 app.listen(port, () => {
     console.log(`Express server running on port ${port}`);

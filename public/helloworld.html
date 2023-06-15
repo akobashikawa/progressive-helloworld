@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+<body>
+    <button onclick="helloworld()">Hello World</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+        const resultEl = document.getElementById('result');
+        
+        async function helloworld() {
+            try {
+                const response = await fetch('/api/helloworld');
+                const data = await response.json();
+                resultEl.innerHTML = data.greeting;
+            } catch (error) {
+                resultEl.innerHTML = error;
+            }
+        }
+    </script>
+</body>
+</html>
