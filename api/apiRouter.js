@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const HelloWorld = require('../core/helloworld');
+const ApiController = require('./apiController');
 
-router.get('/helloworld', (req, res, next) => {
-    const greeting = HelloWorld.helloworld();
-    res.json({ greeting });
-});
+const apiController = new ApiController();
+
+router.get('/helloworld', apiController.helloworld);
 
 module.exports = router;
