@@ -1,13 +1,11 @@
-const HelloWorld = require('../core/helloworld');
-
 class ApiController {
 
-    constructor() {
-
+    constructor({ apiService }) {
+        this.apiService = apiService;
     }
     
-    helloworld = async (req, res, next) => {
-        const greeting = HelloWorld.helloworld();
+    helloworld = (req, res, next) => {
+        const greeting = this.apiService.helloworld();
         res.json({ greeting });
     }
 
